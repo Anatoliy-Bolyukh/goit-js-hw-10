@@ -47,6 +47,13 @@ function onSearch(event) {
             } else {
                 countryInfo.innerHTML = "";
             }
+
+            if (event.target.value.trim() === 'Russia' || event.target.value.trim() === 'russia') {
+                alert('Кацап завжди був мудаком ну як пустить його в Європу? Де треба жить своїм умом він же підставить свою жопу. Тому ще в Києвській Русі на віче предки говорили: якщо зустрінеш десь, колись то зразу бий кацапа в рило. Кацапа звідусіль жени – хай здохне в ямі при дорозі. Ти подаєш йому води, а він вже сере на порозі.')
+                countryInfo.innerHTML = `<li>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDFPexAN2OHD_EmF2Adr21AsrY5Onx2TTjbCeQd2sB7JUBQDFJJtk1moarypWnGI-iZes&usqp=CAU" alt="гавно" width="150" height="150">
+                </li>`
+            }
         })
 
     }
