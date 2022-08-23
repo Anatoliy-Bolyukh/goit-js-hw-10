@@ -24,8 +24,8 @@ function onSearch(event) {
 
             } if (data.length >= 2 && data.length <= 10) {
                 countryListEl.innerHTML = data.map(({ flags: { svg }, name: { common } }) => {
-                    return `<li class="list">
-                    <img src ='${svg}'
+                    return `<li>
+                    <img  src ='${svg}'>
                     <p>${common}</p>
                     </li>`
                 }).join('');
@@ -36,7 +36,7 @@ function onSearch(event) {
                 countryInfo.innerHTML = data.map(({ flags: { svg }, name: { common }, capital, population, languages }) => {
                     return `<li>
                 <div>
-                    <img src="${svg}" alt="${common}" width="30" height="15"> 
+                    <img src="${svg}" alt="${common}" width="170" height="100"> 
                     <h1>${common}</h1>
                 </div>
                     <p><b>Capital</b>: ${capital}</p>
@@ -48,10 +48,10 @@ function onSearch(event) {
                 countryInfo.innerHTML = "";
             }
 
-            if (event.target.value.trim() === 'Russia' || event.target.value.trim() === 'russia') {
+            if (event.target.value.trim() === 'Russia' || event.target.value.trim() === 'russia' || event.target.value.trim() === 'Russi' || event.target.value.trim() === 'russi') {
                 alert('Кацап завжди був мудаком ну як пустить його в Європу? Де треба жить своїм умом він же підставить свою жопу. Тому ще в Києвській Русі на віче предки говорили: якщо зустрінеш десь, колись то зразу бий кацапа в рило. Кацапа звідусіль жени – хай здохне в ямі при дорозі. Ти подаєш йому води, а він вже сере на порозі.')
                 countryInfo.innerHTML = `<li>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDFPexAN2OHD_EmF2Adr21AsrY5Onx2TTjbCeQd2sB7JUBQDFJJtk1moarypWnGI-iZes&usqp=CAU" alt="гавно" width="150" height="150">
+                <img src="https://upload.wikimedia.org/wikipedia/uk/4/44/Hulak_Kacap.jpg" alt="гавно" width="300" height="400">
                 </li>`
             }
         })
